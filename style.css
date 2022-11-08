@@ -11,61 +11,40 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
     margin: 0;
-    background-color: rgb(28, 26, 26);
+    background-color: #674cc7;
+    color: #fff;
+    overflow-x: hidden;
 }
 
-.container {
-    display: flex;
-    width: 90vw;
-}
-
-.title {
-    color: aliceblue;
-    font-weight: 700;
-}
-
-.panel {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 50px;
-    color: white;
-    cursor: pointer;
-    flex: 0.5;
+h1 {
     margin: 10px;
-    position: relative;
-    transition: flex 0.7s ease-in;
 }
 
-.panel h3 {
-    font-size: 24px;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    opacity: 0;
+.box {
+    background-color: #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 5px rgb(0, 0, 0, 0.3);
+    transform: translateX(400%);
+    transition: transform .9s ease;
 }
 
-.panel.active {
-    flex: 5;
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
 }
 
-.panel.active h3{
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
+.box.show {
+    transform: translateX(0);
 }
 
-@media (max-width: 768px) {  
-    .container {
-        width: 100vw;
-    }
-
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5){
-        display: none;
-    }
+.box h2 {
+    font-size: 45px;
 }
+
+
